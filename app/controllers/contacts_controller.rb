@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
-  after_action :send_mail, only: [:create]
+  after_action :send_mail, only: [:create,:update]
   # GET /contacts
   # GET /contacts.json
   def index

@@ -1,0 +1,15 @@
+
+
+<%= semantic_form_for @contact do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name, :hint => "Please fill", :required => true %>
+    <%= f.input :email %>
+    <%= f.input :cell,  :as => :select, :collection => Contact.pluck(:name), :label => "cell"%>
+    <%= f.input :address %>
+    <%= f.input :gender, :as => :radio, :collection => ["Male", "Female"] %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

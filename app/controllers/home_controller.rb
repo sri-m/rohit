@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def set_cookies
-    cookies[:user_name]   = "Horst Meier" 
+    cookies[:user_name]   = "Rohit Hanjagi" 
     cookies[:customer_number] = "1234567890" 
   end
   

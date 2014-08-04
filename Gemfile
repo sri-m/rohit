@@ -2,11 +2,20 @@ source 'https://rubygems.org'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem "kaminari"
+gem "heroku"
+gem "therubyracer"
+group :development, :test do
+    gem "mysql2"
+    gem 'taps'
+end
+group :production do
+    gem "pg"   #heroku supports only pg db
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+#gem 'mysql2'
 gem 'devise'
 gem 'formtastic'
 # Use SCSS for stylesheets

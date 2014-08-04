@@ -3,6 +3,6 @@ class UserMailer < ActionMailer::Base
 
   def email(contact)
   	@contact = contact
-  	mail(:to => "rohithanjagi@gmail.com", :subject => 'Hi I recieved your mail')
+  	mail(:to => @contact.email, :subject => 'Hi I recieved your mail')
   end
 end
